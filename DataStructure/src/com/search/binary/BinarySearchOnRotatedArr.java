@@ -52,5 +52,4 @@ public class BinarySearchOnRotatedArr {
 		int res = searchVal(arr, val, 0, arr.length - 1);
 		System.out.println(res);
 	}
-
 }
