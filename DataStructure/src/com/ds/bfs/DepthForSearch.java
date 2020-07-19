@@ -7,15 +7,15 @@ import java.util.Stack;
 public class DepthForSearch {// Inorder8tu
 
 	public static List<Integer> preOrder(Node root) {
-		List<Integer> l=new ArrayList<>();
+		List<Integer> l = new ArrayList<>();
 		if (root == null) {
 			return l;
 		} else {
 			Stack<Node> nodeLeftRight = new Stack<>();
 			nodeLeftRight.push(root);
-				while (nodeLeftRight.isEmpty()==false) {
-					l.add(nodeLeftRight.peek().data);
-				Node tempNode =nodeLeftRight.pop();
+			while (nodeLeftRight.isEmpty() == false) {
+				l.add(nodeLeftRight.peek().data);
+				Node tempNode = nodeLeftRight.pop();
 				if (tempNode.right != null) {
 					nodeLeftRight.push(tempNode.right);
 				}
@@ -37,7 +37,7 @@ public class DepthForSearch {// Inorder8tu
 		rootNode.left.right = new Node(7);
 		rootNode.right.left = new Node(8);
 		rootNode.right.right = new Node(9);
-		List<Integer> res=preOrder(rootNode);
+		List<Integer> res = preOrder(rootNode);
 		System.out.println(res);
 	}
 

@@ -33,19 +33,19 @@ public class InorderDFS {
 		queue.add(root);
 		while (!queue.isEmpty()) {
 			List<Integer> list5 = new ArrayList<>();
-				Node node = queue.poll();
-				list5.add(node.data);
-				if (node.left != null) {
-					queue.add(node.left);
-				}
-				if (node.right != null) {
-					queue.add(node.right);
-				}
-			//}
+			Node node = queue.poll();
+			list5.add(node.data);
+			if (node.left != null) {
+				queue.add(node.left);
+			}
+			if (node.right != null) {
+				queue.add(node.right);
+			}
+			// }
 			list.add(list5);
 		}
 		return list;
-		
+
 	}
 
 	public static void main(String[] args) {
