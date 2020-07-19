@@ -8,9 +8,9 @@ public class BinarySearchRecurssion {
 			if (arr[mid] == val) {
 				return mid;
 			}
-			if (arr[mid] > val) 
+			if (arr[mid] > val)
 				return binarySearch(arr, low, mid - 1, val);
-				return binarySearch(arr, mid + 1, high, val);
+			return binarySearch(arr, mid + 1, high, val);
 		}
 		return -1;
 	}
