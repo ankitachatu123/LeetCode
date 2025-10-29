@@ -1,0 +1,27 @@
+class Solution {
+//Common Prefix are the initial common letters in the word
+//This is a brute force solution wherein each letter of a string is compared with subsequent string.
+//Time Complexity - m*(n-1) = m is the common prefix 
+//ingredient ingredience ingression ingressiveness - (10,9),(9,5),(5,5) = M = length of 1st element
+    public String longestCommonPrefix(String[] strs) {
+         if (strs.length == 0) return "";
+    StringBuilder prefix = new StringBuilder(strs[0]);
+    for (int i = 1; i < strs.length; i++) {
+      StringBuilder common = new StringBuilder();
+      String current = strs[i];
+      for(int x=0; x<current.length() && x<prefix.length(); x++) {
+        if(current.charAt(x)==prefix.charAt(x)) {
+          common.append(current.charAt(x));
+        } else {
+          break;
+        }
+      }
+      prefix = common;
+    }
+    return prefix.toString();
+    }
+
+
+//Optimized Solution - Divide and Conquer
+
+}
