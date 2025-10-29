@@ -1,5 +1,9 @@
 class Solution {
-//Brute Force Approach - n(n-1) = n^2-n = O(n^2)
+//Brute Force Approach 
+//number of comparisons= time complexity - (n-1)+(n-2)+(n-3)......+1
+//This sum is called an arithmetic series and simplifies to: n(n-1)/2 
+//for n=4, we will make 4*3/2 =6 comparisons
+//Explanation - (0,1)(0,2)(0,3) (1,2)(1,3) (2,3)
    public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
         int len = nums.length;
@@ -13,4 +17,6 @@ class Solution {
         } 
         return result;
     }
+
+//Optimized 
 }
