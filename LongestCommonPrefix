@@ -23,5 +23,30 @@ class Solution {
 
 
 //Optimized Solution - Divide and Conquer
+ public String longestCommonPrefix(String[] strs) {
+        return divideProblem(strs, 0, strs.length - 1);
+    }
 
+    public String divideProblem(String[] strs, int l, int r) {
+        if (l == r)
+            return strs[l];
+        if (l < r) {
+            int mid = l + (r - l) / 2;
+            String s1 = divideProblem(strs, l, mid);
+            String s2 = divideProblem(strs, mid + 1, r);
+            return combineResponse(s1, s2);
+        }
+        return "";
+    }
+
+    public String combineResponse(String s1, String s2) {
+        int min = Math.min(s1.length(), s2.length());
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < min; i++) {
+            if (s1.charAt(i) != s2.charAt(i))
+                break;
+            res.append(s1.charAt(i));
+        }
+        return res.toString();
+    }
 }
