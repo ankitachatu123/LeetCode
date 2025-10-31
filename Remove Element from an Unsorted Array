@@ -10,4 +10,16 @@ class Solution {
         }
         return nums.length-k;
     }
+//2nd approach
+public int removeElementSecondSol(int[] nums, int val) {
+        int count=0; int len = nums.length;
+        for(int i=0; i<len; i++) {
+           if(nums[i]==val) {
+             count++;
+           } else {
+             nums[i-count]=nums[i];
+           }
+        }
+        return len-count;
+    }
 }
