@@ -1,0 +1,35 @@
+class Solution {
+  //Time complexity - O(n) and Space Complexity - O(1)
+  //leveraging sorted array
+    public int removeDuplicates(int[] nums) { //1,1,2
+        int dup = 0; int len=nums.length;
+        if (len == 0|| len==1) return len;
+        for (int i = 1; i < nums.length; i++) {
+            if(nums[i]==nums[i-1]) {
+                dup++;
+            } else {
+                nums[i-dup] = nums[i];
+            }
+        }
+        return len - dup;
+    }
+
+  //Brute force approach using space complexity 
+      public int removeDuplicates(int[] nums) { //1,1,2
+        int dup = 0;
+        if (nums.length == 0)
+            return dup;
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (set.isEmpty()) {
+                set.add(nums[i]);
+            } else if (set.contains(nums[i])) {
+                dup++;
+            } else {
+                set.add(nums[i]);
+                nums[i - dup] = nums[i];
+            }
+        }
+        return nums.length - dup;
+    }
+}
