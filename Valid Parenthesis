@@ -17,6 +17,21 @@ class Solution {
         return false;
     }
 
+//Second Solution
+public boolean isValidParenthesis(String s) {
+    Stack<Character> stack = new Stack<>();
+    for (char c : s.toCharArray()) {
+        if (c== '(' || c== '{' || c == '[') {
+          stack.push(c);
+        } else if (!stack.isEmpty()){
+          char open = stack.pop();
+          if((c== (')') && open!='(')) return false;
+          if((c== ('}') && open!='{')) return false;
+          if((c== (']') && open!='[')) return false;
+        } 
+      }
+      return stack.isEmpty();
+    }
 // if open brack then push closed bracket
 // while reading closed bracket pop out closed bracket
 public boolean isValidOptimized(String s) {
