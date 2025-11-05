@@ -1,4 +1,4 @@
-class Solution {
+class LongestCommonPrefix {
 //Common Prefix are the initial common letters in the word
 //This is a brute force solution wherein each letter of a string is compared with subsequent string.
 //Time Complexity - m*(n-1) = m is the common prefix 
