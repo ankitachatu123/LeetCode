@@ -26,6 +26,7 @@ public boolean isAnagramOptimisedSol(String s, String t) {
     }
     return map.isEmpty();
   }
+
 //using an array of size=26 and ASCII table
  public boolean isAnagramOptimized(String s, String t) {
       if(s.length()!=t.length()) return false;
