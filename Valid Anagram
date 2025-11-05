@@ -28,7 +28,7 @@ public boolean isAnagramOptimisedSol(String s, String t) {
   }
 
 //using an array of size=26 and ASCII table
- public boolean isAnagramOptimized(String s, String t) {
+ public boolean findIsAnagram(String s, String t) {
       if(s.length()!=t.length()) return false;
       int[] arr = new int[26];
       for(int i=0; i<s.length(); i++) {
