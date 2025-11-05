@@ -1,4 +1,4 @@
-class Solution {
+class RemoveDuplicates {
 //optimized code 
 public int removeDuplicatesOptimized(int[] nums) { 
         int i=0;
