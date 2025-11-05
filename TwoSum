@@ -1,4 +1,4 @@
-class Solution {
+class TwoSumSolution {
 //Brute Force Approach 
 //number of comparisons= time complexity - (n-1)+(n-2)+(n-3)......+1
 //This sum is called an arithmetic series and simplifies to: n(n-1)/2 
