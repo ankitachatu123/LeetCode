@@ -1,11 +1,16 @@
 class BitManipulation {
+//Basics for Bit Manipulation
+// 0+0=0, 0+1=1, 1+0=1, 1+1=10, 1+1+1=11
+//number to binary 4 to binary = 4%2=0 -> 4/2=2, 2%2=0 -> 1%2=1, -> 1/2=0
+// 100
+//Binary to number -> 1×2^2+0*2^1+0*2^2 = 1*4+0+0 = 4
     public String addBinary(String a, String b) {
         int i=a.length()-1; int j=b.length()-1;
         int carry=0;
         StringBuilder str = new StringBuilder();
         while(i>=0 || j>=0 || carry==1) {
             if(i>=0) 
-            carry+=a.charAt(i)-'0'; i--;
+            carry+=a.charAt(i)-'0'; i--; // can do postfix decrement a.charAt(i--)
             if(j>=0)
             carry+=b.charAt(j)-'0'; j--;
             str.append(carry%2);
