@@ -1,0 +1,12 @@
+class TwoPointerAlgo {
+    public boolean containsDuplicate(int[] nums) {
+        //[1] - return false
+        //[1,2,3,1,2]
+        Arrays.sort(nums); int i=0; int j=i+1;
+        while (i<j && j<nums.length) { //1
+            if(nums[i]==nums[j]) return true;
+            i++; j++;
+        }
+        return false;
+    }
+}
