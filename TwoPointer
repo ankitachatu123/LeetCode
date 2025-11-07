@@ -1,4 +1,5 @@
 class TwoPointerAlgo {
+//Time Complexity - O(nlogn)
     public boolean containsDuplicate(int[] nums) {
         //[1] - return false
         //[1,2,3,1,2]
@@ -6,6 +7,17 @@ class TwoPointerAlgo {
         while (i<j && j<nums.length) { //1
             if(nums[i]==nums[j]) return true;
             i++; j++;
+        }
+        return false;
+    }
+
+//Time Complexity - O(n)
+//Space Complexity - O(n)
+public boolean containsDuplicateUsingSet(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for(int i=0; i<nums.length; i++) {
+            if(set.contains(nums[i])) return true;
+            set.add(nums[i]);
         }
         return false;
     }
